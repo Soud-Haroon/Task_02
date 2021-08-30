@@ -7,7 +7,25 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myAppBar(),
+      //-----------------------//
       body: MainBody(),
+      //----------------------//
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: kPrimaryGreen,
+        child: Icon(
+          Icons.person_add_alt_1,
+          color: Colors.white,
+        ),
+      ),
+      //-------------------------//
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chat"),
+          BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
+          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Call"),
+        ],
+      ),
     );
   }
 
@@ -16,7 +34,7 @@ class ChatScreen extends StatelessWidget {
       automaticallyImplyLeading: false,
       elevation: 0,
       title: Text('Chats'),
-      backgroundColor: PrimaryGreen,
+      backgroundColor: kPrimaryGreen,
       actions: [
         IconButton(
           onPressed: () {},

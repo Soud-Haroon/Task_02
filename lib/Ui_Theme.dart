@@ -4,32 +4,32 @@ import 'package:task_blackwhite_02/constColors.dart';
 
 ThemeData lightTheme(BuildContext context) {
   return ThemeData.light().copyWith(
-    primaryColor: PrimaryGreen,
+    primaryColor: kPrimaryGreen,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(),
-    iconTheme: IconThemeData(color: ContentColorLightTheme),
+    iconTheme: IconThemeData(color: kContentColorLightTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: ContentColorLightTheme),
+        .apply(bodyColor: kContentColorLightTheme),
     colorScheme: ColorScheme.light(
-      primary: PrimaryGreen,
-      secondary: SecondaryDarkYellow,
-      error: ErrorRedColor,
+      primary: kPrimaryGreen,
+      secondary: kSecondaryDarkYellow,
+      error: kErrorRedColor,
     ),
   );
 }
 
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
-    primaryColor: PrimaryGreen,
-    scaffoldBackgroundColor: ContentColorLightTheme,
+    primaryColor: kPrimaryGreen,
+    scaffoldBackgroundColor: kContentColorLightTheme,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: ContentColorDarkTheme),
+    iconTheme: IconThemeData(color: kContentColorDarkTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: ContentColorDarkTheme),
+        .apply(bodyColor: kContentColorDarkTheme),
     colorScheme: ColorScheme.dark().copyWith(
-      primary: PrimaryGreen,
-      secondary: SecondaryDarkYellow,
-      error: ErrorRedColor,
+      primary: kPrimaryGreen,
+      secondary: kPrimaryGreen,
+      error: kErrorRedColor,
     ),
   );
 }

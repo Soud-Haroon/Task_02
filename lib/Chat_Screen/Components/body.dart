@@ -12,7 +12,7 @@ class MainBody extends StatelessWidget {
         Container(
           padding: EdgeInsets.fromLTRB(
               kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
-          color: PrimaryGreen,
+          color: kPrimaryGreen,
           child: Row(
             children: [
               FillOutlineButton(press: () {}, text: 'Recent Message'),

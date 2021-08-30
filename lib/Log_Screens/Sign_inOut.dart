@@ -23,7 +23,8 @@ class SignInorOut extends StatelessWidget {
             Spacer(),
             PrimaryButton(
               text: 'Sign In',
-              press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen())),
+              press: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ChatScreen())),
             ),
             //--------------------//
             SizedBox(height: kDefaultPadding * 1.5),
@@ -31,7 +32,7 @@ class SignInorOut extends StatelessWidget {
             PrimaryButton(
               text: 'Sign up',
               press: () {},
-              color: Theme.of(context).colorScheme.secondary,
+              color: kSecondaryDarkYellow,
             ),
             //-----------------//
             Spacer(flex: 2),
