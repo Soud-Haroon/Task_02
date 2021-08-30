@@ -34,14 +34,14 @@ class ChatCard extends StatelessWidget {
     Key? key,
     this.chat,
   }) : super(key: key);
-  final Chat chat;
+  final Chat? chat;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         CircleAvatar(
-          backgroundImage: AssetImage(chat.image),
+          backgroundImage: AssetImage(chat!.image.toString()),
         ),
       ],
     );
