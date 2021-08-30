@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_blackwhite_02/Ui_Theme.dart';
 import 'package:task_blackwhite_02/Welcome_Screen/MainWelcome.dart';
 
 void main() {
@@ -11,11 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: lightTheme(context),
+      darkTheme: darkThemeData(context),
       home: WelcomeScreen(),
     );
   }
 }
-

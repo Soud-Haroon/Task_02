@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 
 ThemeData lightTheme(BuildContext context) {
@@ -7,8 +8,8 @@ ThemeData lightTheme(BuildContext context) {
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(),
     iconTheme: IconThemeData(color: ContentColorLightTheme),
-    // textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-    //     .apply(bodyColor: kContentColorLightTheme),
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
+        .apply(bodyColor: ContentColorLightTheme),
     colorScheme: ColorScheme.light(
       primary: PrimaryGreen,
       secondary: SecondaryDarkYellow,
@@ -23,8 +24,8 @@ ThemeData darkThemeData(BuildContext context) {
     scaffoldBackgroundColor: ContentColorLightTheme,
     appBarTheme: appBarTheme,
     iconTheme: IconThemeData(color: ContentColorDarkTheme),
-    // textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-    //     .apply(bodyColor: kContentColorDarkTheme),
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
+        .apply(bodyColor: ContentColorDarkTheme),
     colorScheme: ColorScheme.dark().copyWith(
       primary: PrimaryGreen,
       secondary: SecondaryDarkYellow,
