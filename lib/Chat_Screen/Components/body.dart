@@ -23,7 +23,7 @@ class MainBody extends StatelessWidget {
         Expanded(
             child: ListView.builder(
                 itemCount: chatsData.length,
-                itemBuilder: (context, index) => ChatCard())),
+                itemBuilder: (context, index) => ChatCard(chat: chatsData[index],))),
       ],
     );
   }
