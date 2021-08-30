@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_blackwhite_02/Chat_Screen/Cards/Chat_Card.dart';
 import 'package:task_blackwhite_02/My_Buttons/Filloutline_Button.dart';
 import 'package:task_blackwhite_02/chatData/Chat.dart';
 import 'package:task_blackwhite_02/constColors.dart';
@@ -14,7 +15,7 @@ class MainBody extends StatelessWidget {
           color: PrimaryGreen,
           child: Row(
             children: [
-              FillOutlineButton(press: () {}, text: 'Recents Message'),
+              FillOutlineButton(press: () {}, text: 'Recent Message'),
               SizedBox(width: kDefaultPadding),
               FillOutlineButton(press: () {}, text: 'Active', isFilled: false),
             ],
@@ -23,26 +24,10 @@ class MainBody extends StatelessWidget {
         Expanded(
             child: ListView.builder(
                 itemCount: chatsData.length,
-                itemBuilder: (context, index) => ChatCard(chat: chatsData[index],))),
-      ],
-    );
-  }
-}
-
-class ChatCard extends StatelessWidget {
-  const ChatCard({
-    Key? key,
-    this.chat,
-  }) : super(key: key);
-  final Chat? chat;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        CircleAvatar(
-          backgroundImage: AssetImage(chat!.image.toString()),
-        ),
+                itemBuilder: (context, index) => ChatCard(
+                      chat: chatsData[index],
+                      press: () {},
+                    ))),
       ],
     );
   }

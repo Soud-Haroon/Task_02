@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_blackwhite_02/Chat_Screen/Components/body.dart';
+import 'package:task_blackwhite_02/constColors.dart';
 
 class ChatScreen extends StatelessWidget {
   @override
@@ -15,6 +16,7 @@ class ChatScreen extends StatelessWidget {
       automaticallyImplyLeading: false,
       elevation: 0,
       title: Text('Chats'),
+      backgroundColor: PrimaryGreen,
       actions: [
         IconButton(
           onPressed: () {},
