@@ -7,4 +7,4 @@ const ContentColorDarkTheme = Color(0xFFF5FCF9);
 const WarninngYellowColor = Color(0xFFF3BB1C);
 const ErrorRedColor = Color(0xFFF03738);
 
-const DefaultPadding = 20.0;
+const kDefaultPadding = 20.0;

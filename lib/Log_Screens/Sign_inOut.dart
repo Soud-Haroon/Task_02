@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_blackwhite_02/Chat_Screen/Chat_Ui.dart';
 import 'package:task_blackwhite_02/My_Buttons/Primary_Button.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 
@@ -8,7 +9,7 @@ class SignInorOut extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: DefaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Column(
           children: [
             Spacer(flex: 2),
@@ -22,10 +23,10 @@ class SignInorOut extends StatelessWidget {
             Spacer(),
             PrimaryButton(
               text: 'Sign In',
-              press: () {},
+              press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen())),
             ),
             //--------------------//
-            SizedBox(height: DefaultPadding * 1.5),
+            SizedBox(height: kDefaultPadding * 1.5),
             //-------------------//
             PrimaryButton(
               text: 'Sign up',

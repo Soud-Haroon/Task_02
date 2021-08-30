@@ -49,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                               ?.color
                               ?.withOpacity(0.64)),
                     ),
-                    SizedBox(width: DefaultPadding / 4),
+                    SizedBox(width: kDefaultPadding / 4),
                     Icon(Icons.arrow_forward_ios,
                         size: 16,
                         color: Theme.of(context)
