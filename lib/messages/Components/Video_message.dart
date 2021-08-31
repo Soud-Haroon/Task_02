@@ -38,3 +38,4 @@ class VideoMessage extends StatelessWidget {
     );
   }
 }
+
