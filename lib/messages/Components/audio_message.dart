@@ -33,7 +33,9 @@ class AudioMessage extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     height: 2,
-                    color: kPrimaryGreen.withOpacity(0.4),
+                    color: message.isSender!
+                        ? Colors.white
+                        : kPrimaryGreen.withOpacity(0.4),
                   ),
                   Positioned(
                     left: 0,
@@ -41,7 +43,7 @@ class AudioMessage extends StatelessWidget {
                       height: 8,
                       width: 8,
                       decoration: BoxDecoration(
-                        color: kPrimaryGreen,
+                        color: message.isSender! ? Colors.white : kPrimaryGreen,
                         shape: BoxShape.circle,
                       ),
                     ),

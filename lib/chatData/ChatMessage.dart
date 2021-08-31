@@ -34,7 +34,7 @@ List demeChatMessages = [
     text: "",
     messageType: ChatMessageType.audio,
     messageStatus: MessageStatus.viewed,
-    isSender: false,
+    isSender: true,
   ),
   ChatMessage(
     text: "",
