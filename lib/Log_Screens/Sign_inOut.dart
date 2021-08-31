@@ -32,7 +32,7 @@ class SignInorOut extends StatelessWidget {
             PrimaryButton(
               text: 'Sign up',
               press: () {},
-              color: kSecondaryDarkYellow,
+              color: Theme.of(context).colorScheme.secondary,
             ),
             //-----------------//
             Spacer(flex: 2),
