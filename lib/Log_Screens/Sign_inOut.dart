@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_blackwhite_02/Chat_Screen/Chat_Ui.dart';
 import 'package:task_blackwhite_02/My_Buttons/Primary_Button.dart';
+import 'package:task_blackwhite_02/Tab.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 
 class SignInorOut extends StatelessWidget {
@@ -31,7 +32,7 @@ class SignInorOut extends StatelessWidget {
             //-------------------//
             PrimaryButton(
               text: 'Sign up',
-              press: () {},
+              press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MyTabBarView())),
               color: Theme.of(context).colorScheme.secondary,
             ),
             //-----------------//
