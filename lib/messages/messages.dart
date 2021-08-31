@@ -18,10 +18,13 @@ class Messages extends StatelessWidget {
       switch (message.messageType) {
         case ChatMessageType.text:
           return TextMessages(message: message);
+        //======================================//
         case ChatMessageType.audio:
           return AudioMessage(message: message);
+        //======================================//
         case ChatMessageType.video:
           return VideoMessage();
+        //=====================================//
         default:
           return SizedBox();
       }
@@ -39,13 +42,10 @@ class Messages extends StatelessWidget {
               backgroundImage: AssetImage('assets/images/user_2.png'),
             ),
           SizedBox(width: kDefaultPadding / 2),
+          //=======================================================//
           messageContaint(message),
         ],
       ),
     );
   }
 }
-
-//=======================================================//
-
-
