@@ -11,9 +11,6 @@ class MessageScreen extends StatelessWidget {
     );
   }
 
-
-
-
 //---------------------------------------------------//
   AppBar buildAppBar() {
     return AppBar(

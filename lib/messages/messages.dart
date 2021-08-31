@@ -12,6 +12,15 @@ class Messages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget messageContaint(ChatMessage message) {
+      switch (message.messageType) {
+        case ChatMessageType.text:
+          return TextMessages(message: message);
+        default:
+          return SizedBox();
+      }
+    }
+
     return Padding(
       padding: const EdgeInsets.only(top: kDefaultPadding),
       child: Row(
@@ -24,7 +33,8 @@ class Messages extends StatelessWidget {
               backgroundImage: AssetImage('assets/images/user_2.png'),
             ),
           SizedBox(width: kDefaultPadding / 2),
-          TextMessages(message: message),
+          // TextMessages(message: message),
+          messageContaint(message),
         ],
       ),
     );
