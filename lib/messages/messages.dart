@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_blackwhite_02/chatData/ChatMessage.dart';
 import '../constColors.dart';
 import 'Components/Text_Messages.dart';
+import 'Components/Video_message.dart';
 import 'Components/audio_message.dart';
 
 class Messages extends StatelessWidget {
@@ -19,6 +20,8 @@ class Messages extends StatelessWidget {
           return TextMessages(message: message);
         case ChatMessageType.audio:
           return AudioMessage(message: message);
+        case ChatMessageType.video:
+          return VideoMessage();
         default:
           return SizedBox();
       }
@@ -44,4 +47,5 @@ class Messages extends StatelessWidget {
 }
 
 //=======================================================//
+
 
