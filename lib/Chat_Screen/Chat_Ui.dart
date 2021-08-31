@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_blackwhite_02/Chat_Screen/Components/body.dart';
+import 'package:task_blackwhite_02/Chat_Screen/Components/Chatbody.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       appBar: myAppBar(),
       //-----------------------//
-      body: MainBody(),
+      body: ChatBody(),
       //----------------------//
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

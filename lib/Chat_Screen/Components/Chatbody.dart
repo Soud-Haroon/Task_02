@@ -3,8 +3,9 @@ import 'package:task_blackwhite_02/Chat_Screen/Cards/Chat_Card.dart';
 import 'package:task_blackwhite_02/My_Buttons/Filloutline_Button.dart';
 import 'package:task_blackwhite_02/chatData/Chat.dart';
 import 'package:task_blackwhite_02/constColors.dart';
+import 'package:task_blackwhite_02/messages/message_screen.dart';
 
-class MainBody extends StatelessWidget {
+class ChatBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,7 +27,7 @@ class MainBody extends StatelessWidget {
                 itemCount: chatsData.length,
                 itemBuilder: (context, index) => ChatCard(
                       chat: chatsData[index],
-                      press: () {},
+                      press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MessageScreen()))
                     ))),
       ],
     );
