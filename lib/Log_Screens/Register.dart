@@ -147,6 +147,36 @@ class ResgiterForm extends StatelessWidget {
                   } else
                     return null;
                 }),
+            //===============================================================//
+            SizedBox(height: 20),
+            TextFormField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.grey[500]?.withOpacity(0.64),
+                  hintText: "Confirm Password",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                    ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                    ),
+                  ),
+                ),
+                validator: (value) {
+                  if (value!.contains(' ')) {
+                    return 'Password can not contain blank Spaces';
+                  } else if (value.length < 6) {
+                    return 'Enter atleast 8 characters';
+                  } else
+                    return null;
+                }),
+            //-------------------------------------------------------------//
             Spacer(flex: 2),
             PrimaryButton(text: 'Sign Up', press: (){},color: Theme.of(context).colorScheme.secondary,),
             Spacer(),

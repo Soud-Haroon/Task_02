@@ -62,10 +62,7 @@ class _MyTabBarViewState extends State<MyTabBarView>
             ),
             body: TabBarView(
               controller: _controller,
-              children: [
-                LogForm(),
-                ResgiterForm()
-              ],
+              children: [LogForm(), ResgiterForm()],
             ),
           ),
         ],

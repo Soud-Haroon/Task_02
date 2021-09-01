@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_blackwhite_02/Chat_Screen/Chat_Ui.dart';
 import 'package:task_blackwhite_02/My_Buttons/Primary_Button.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 
@@ -79,7 +80,7 @@ class LogForm extends StatelessWidget {
                     return null;
                 }),
             Spacer(flex: 2),
-            PrimaryButton(text: 'Log in', press: (){}),
+            PrimaryButton(text: 'Log in', press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen()))),
             Spacer(),
           ],
         ),

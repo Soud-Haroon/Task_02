@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task_blackwhite_02/Log_Screens/Sign_inOut.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 
+import '../Tab.dart';
+
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
           //----------------------------------------------//
           FittedBox(
             child: TextButton(
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SignInorOut())),
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MyTabBarView())),
                 child: Row(
                   children: [
                     Text(
