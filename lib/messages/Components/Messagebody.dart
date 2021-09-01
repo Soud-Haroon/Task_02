@@ -13,38 +13,25 @@ class MessageBody extends StatelessWidget {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+
             //================================================================//
             //Need to used my own list so that I can group my chat:
             child: GroupedListView<dynamic, String>(
               elements:
-                  _elements, //how to add my demoChatMessage??: in ListOfMessages.dart
-              groupBy: (element) => element['group'], //  <--
+                  _elements, //how to add my list(demoChatMessage)??: in ListOfMessages.dart
+              groupBy: (element) => element[
+                  'group'], //    <-- how to compare it by date added in list(demoChatMessage)
               groupSeparatorBuilder: (String groupByValue) =>
                   Text(groupByValue),
               itemBuilder: (context, dynamic element) =>
                   Text(element['name']), // <--
-              itemComparator: (item1, item2) =>
-                  item1['name'].compareTo(item2['name']), // optional // <--
+              itemComparator: (item1, item2) => item1['name'].compareTo(item2[
+                  'name']), // optional // <-- and add Text from list(demoChatMessage)
               useStickyGroupSeparators: true, // optional
               floatingHeader: true, // optional
               order: GroupedListOrder.ASC,
-              //--------------------------- // optional
-              // itemBuilder: (c, element) {
-              //   return Card(
-              //     elevation: 8.0,
-              //     margin:
-              //         new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-              //     child: Container(
-              //       child: ListTile(
-              //         contentPadding: EdgeInsets.symmetric(
-              //             horizontal: 20.0, vertical: 10.0),
-              //         leading: ImageIcon(NetworkImage(
-              //             'http://www.pngall.com/wp-content/uploads/2017/04/IPL-Logo-2017-PNG.png')),
-              //         title: Text(element['name']),
-              //       ),
-              //     ),
-              //   );
-              // },
+
+              //========================================= // optional
             ),
           ),
         ),
