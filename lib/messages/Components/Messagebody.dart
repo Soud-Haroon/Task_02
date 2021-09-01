@@ -18,7 +18,7 @@ class MessageBody extends StatelessWidget {
             //Need to used my own list so that I can group my chat:
             child: GroupedListView<dynamic, String>(
               elements:
-                  _elements, //how to add my list(demoChatMessage)??: in ListOfMessages.dart
+                  _elements, //how to add my list(demoChatMessage)?? which Constructor by class called ChatMessage: in ListOfMessages.dart
               groupBy: (element) => element[
                   'group'], //    <-- how to compare it by date added in list(demoChatMessage)
               groupSeparatorBuilder: (String groupByValue) =>
