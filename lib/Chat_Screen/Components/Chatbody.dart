@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_blackwhite_02/Chat_Screen/Cards/Chat_Card.dart';
 import 'package:task_blackwhite_02/My_Buttons/Filloutline_Button.dart';
-import 'package:task_blackwhite_02/chatData/Chat.dart';
+import 'package:task_blackwhite_02/Models/Chat.dart';
 import 'package:task_blackwhite_02/constColors.dart';
 import 'package:task_blackwhite_02/messages/message_screen.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_blackwhite_02/chatData/Chat.dart';
+import 'package:task_blackwhite_02/Models/Chat.dart';
 import '../../constColors.dart';
 
 class ChatCard extends StatelessWidget {

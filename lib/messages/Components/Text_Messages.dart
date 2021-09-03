@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_blackwhite_02/chatData/ListOfMessages.dart';
+import 'package:task_blackwhite_02/Models/ListOfMessages.dart';
 
 import '../../constColors.dart';
 
