@@ -9,7 +9,7 @@ class TextMessages extends StatelessWidget {
     required this.message,
   }) : super(key: key);
 
-  final ChatMessage message;
+  final Message message;
 
   @override
   Widget build(BuildContext context) {

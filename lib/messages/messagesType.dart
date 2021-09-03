@@ -5,16 +5,16 @@ import 'Components/Text_Messages.dart';
 import 'Components/Video_message.dart';
 import 'Components/audio_message.dart';
 
-class Messages extends StatelessWidget {
-  const Messages({
+class MessagesType extends StatelessWidget {
+  const MessagesType({
     Key? key,
     required this.message,
   }) : super(key: key);
-  final ChatMessage message;
+  final Message message;
 
   @override
   Widget build(BuildContext context) {
-    Widget messageContaint(ChatMessage message) {
+    Widget messageContaint(Message message) {
       switch (message.messageType) {
         case ChatMessageType.text:
           return TextMessages(message: message);

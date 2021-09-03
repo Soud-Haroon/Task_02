@@ -4,7 +4,7 @@ import 'package:task_blackwhite_02/Models/ListOfMessages.dart';
 import '../../constColors.dart';
 
 class AudioMessage extends StatelessWidget {
-  final ChatMessage message;
+  final Message message;
   const AudioMessage({Key? key, required this.message}) : super(key: key);
   @override
   Widget build(BuildContext context) {

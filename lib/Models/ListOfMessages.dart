@@ -8,163 +8,23 @@ enum ChatMessageType {
 }
 enum MessageStatus { not_sent, not_view, viewed }
 
-class ChatMessage {
+class Message {
   final String? text;
-  // final String name;
-  // final String group;
   final String? date;
   final ChatMessageType? messageType;
   final MessageStatus? messageStatus;
   final bool? isSender;
 
-  ChatMessage({
+  Message({
     this.text,
     this.date,
-    // required this.name,
-    // required this.group,
     @required this.messageType,
     @required this.messageStatus,
     @required this.isSender,
   });
 }
 
-// List<Message> myMsg = [
-//   new Message(
-//     name: 'anees',
-//     group: '01-jan',
-//     text: 'Hi Sajol',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'ali',
-//     group: '01-jan',
-//     text: 'Hello, How are you?',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'jhon',
-//     group: '12-jan',
-//     text: 'Error happend',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Will',
-//     group: '18-jan',
-//     text: 'This looks great man!!',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Miranda',
-//     group: '30-jan',
-//     text: 'Glad you like it',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Danny',
-//     group: '30-jan',
-//     text: 'This looks great man!!',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'anees',
-//     group: '01-jan',
-//     text: 'Hi Sajol',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'ali',
-//     group: '01-jan',
-//     text: 'Hello, How are you?',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'jhon',
-//     group: '12-jan',
-//     text: 'Error happend',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Will',
-//     group: '18-jan',
-//     text: 'This looks great man!!',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Miranda',
-//     group: '30-jan',
-//     text: 'Glad you like it',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Danny',
-//     group: '30-jan',
-//     text: 'This looks great man!!',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'anees',
-//     group: '01-jan',
-//     text: 'Hi Sajol',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'ali',
-//     group: '01-jan',
-//     text: 'Hello, How are you?',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'jhon',
-//     group: '12-jan',
-//     text: 'Error happend',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Will',
-//     group: '18-jan',
-//     text: 'This looks great man!!',
-//     isSender: false,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
-//   new Message(
-//     name: 'Miranda',
-//     group: '30-jan',
-//     text: 'Glad you like it',
-//     isSender: true,
-//     // messageType: ChatMessageType.text,
-//     // messageStatus: MessageStatus.viewed,
-//   ),
+
 //   new Message(
 //     name: 'Danny',
 //     group: '30-jan',
@@ -177,148 +37,148 @@ class ChatMessage {
 
 
 //===========================================//
-List demoChatMessages = [
-  ChatMessage(
+List<Message> demoChatMessages = [
+  Message(
     text: "Hi Sam,",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
-    date: '1 Sep 2021',
-    isSender: false,
+    date: '01 March 2021',
+    isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Hello, How are you?",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: '20 August 2021',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "",
     messageType: ChatMessageType.audio,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "",
     messageType: ChatMessageType.video,
     messageStatus: MessageStatus.viewed,
-    date: 'Today',
+    date: '20 August 2021',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Error happend",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_sent,
     date: 'Today',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "This looks great man!!",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
-    date: 'Today',
+    date: '14 December 2020',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "Glad you like it",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_view,
     date: 'Today',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Hi...!",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Send me Location",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_sent,
     date: 'Today',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Where are you???",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
-    date: 'Today',
+    date: '20 August 2021',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "I'm Home...",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "See you on Monday...",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_sent,
     date: 'Today',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "Hello? Whats for launch????",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "....",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_sent,
-    date: 'Today',
+    date: 'Yesterday',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Meet me at KFC",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "Ben???",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_view,
-    date: 'Today',
+    date: '15 Setember 2021',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Yes",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_view,
-    date: 'Today',
+    date: '10 March 2021',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "I forgot..",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "I'll be there...",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     date: 'Today',
     isSender: false,
   ),
-  ChatMessage(
+  Message(
     text: "Hello World!",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.not_view,
-    date: 'Today',
+    date: '20 Octuber 2021',
     isSender: true,
   ),
-  ChatMessage(
+  Message(
     text: "Hello you :)",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
